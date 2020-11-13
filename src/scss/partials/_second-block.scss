@@ -1,0 +1,22 @@
+.second-block {
+    grid-column: 2 / 12;
+    background-color: $secondColor;
+}
+
+.second-block-container {
+    display: flex;
+    padding: 50px;
+    img {
+        margin-right: 30px;
+    }
+}
+.second-text {
+    height: 400px;
+    align-content: space-between;
+}
+
+.second-text {
+    h2, p {
+        color: white;
+    }
+}

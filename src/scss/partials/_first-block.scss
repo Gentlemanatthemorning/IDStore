@@ -1,0 +1,37 @@
+.first-block {
+    grid-column: 2 / 12;
+}
+
+.first-content {
+    display: flex;
+    & img {
+        margin-right: 30px;
+    }
+}
+.content {
+    flex-direction: column;
+    align-self: flex-end;
+    & h1 {
+        border-bottom: 8px solid $fontColor;
+        padding-bottom: 20px;
+    }
+    & h2 {
+        padding: 222px 0 30px 0;
+    }
+}
+.first-text {
+    display: flex;
+    justify-content: space-between;
+    & p {
+        padding-top: 20px;
+        width: 360px;
+        margin: 50px 0 50px 0;
+    }
+    & p:first-child {
+        border: 3px solid $secondColor;
+        padding: 20px;
+    }
+    & p:nth-child(2) {
+        padding: 20px 30px 0 30px;
+    }
+}

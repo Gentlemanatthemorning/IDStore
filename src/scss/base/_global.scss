@@ -1,0 +1,58 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body {
+  font-family: 'Oswald', sans-serif;
+  background: $mainColor;
+  & h1 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  & h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  & h3 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  & p {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+.header {
+  grid-area: header;
+}
+.first-block {
+  grid-area: first-block;
+}
+.second-block {
+  grid-area: second-block;
+}
+.third-block {
+  grid-area: third-block;
+}
+.forth-block {
+  grid-area: forth-block;
+}
+.fifth-block {
+  grid-area: fifth-block;
+}
+.footer {
+  grid-area: footer;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "first-block first-block first-block first-block first-block first-block first-block first-block first-block first-block first-block first-block"
+    "second-block second-block second-block second-block second-block second-block second-block second-block second-block second-block second-block second-block"
+    "third-block third-block third-block third-block third-block third-block third-block third-block third-block third-block third-block third-block"
+    "forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block"
+    "fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-columns: auto;
+  padding: 0;
+  grid-template-columns: 141px auto auto auto auto auto auto auto auto auto auto 141px;
+  grid-column: 1 / span 12;
+}
