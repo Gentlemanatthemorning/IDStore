@@ -3,6 +3,10 @@
 body {
   font-family: 'Oswald', sans-serif;
   background: $mainColor;
+  & h1, h2, h3, p {
+    color: $fontColor;
+    line-height: 1.2;
+  }
   & h1 {
     font-size: 60px;
     font-weight: 700;
@@ -20,7 +24,10 @@ body {
     font-weight: 300;
   }
 }
-.header {
+a {
+  text-decoration: none;
+}
+header {
   grid-area: header;
 }
 .first-block {
@@ -35,10 +42,13 @@ body {
 .forth-block {
   grid-area: forth-block;
 }
+.text {
+  grid-area: text;
+}
 .fifth-block {
   grid-area: fifth-block;
 }
-.footer {
+footer {
   grid-area: footer;
 }
 .grid-container {
@@ -49,10 +59,14 @@ body {
     "second-block second-block second-block second-block second-block second-block second-block second-block second-block second-block second-block second-block"
     "third-block third-block third-block third-block third-block third-block third-block third-block third-block third-block third-block third-block"
     "forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block forth-block"
+    "text text text text text text text text text text text text"
     "fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block fifth-block"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-template-columns: auto;
   padding: 0;
   grid-template-columns: 141px auto auto auto auto auto auto auto auto auto auto 141px;
   grid-column: 1 / span 12;
+}
+header, .first-block, .second-block, .third-block, .forth-block, .fifth-block {
+  grid-column: 2 / 12;
 }

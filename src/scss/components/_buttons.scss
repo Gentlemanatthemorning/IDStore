@@ -1,4 +1,7 @@
-button {
+.button-black,
+.button-white,
+.button-read {
+    position: relative;
     background: none;
     border: none;
     font-family: 'Oswald', sans-serif;
@@ -6,16 +9,58 @@ button {
     font-weight: 400;
     text-transform: uppercase;
     padding: 9px 120px 9px 120px;
-    color: $fontColor;
+    cursor: pointer;
+}
+.button-black:hover::after,
+.button-white:hover::after,
+.button-read:hover::after {
+    transform: translate(-3px, -3px);
+}
+.button-black:hover::before,
+.button-white:hover::before,
+.button-read:hover::before {
+    transform: translate(3px, 3px);
+}
+.button-black::after,
+.button-black::before,
+.button-white::after,
+.button-white::before,
+.button-read::after,
+.button-read::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    transition: all .25s ease;
 }
 .button-black {
+    color: $fontColor;
+}
+.button-black::after,
+.button-black::before {
     border: 3px solid $fontColor;
 }
-.button-white {
-    border: 3px solid white;
+.button-white, .button-read {
     color: white;
 }
+.button-white::after,
+.button-white::before,
+.button-read::after,
+.button-read::before {
+    border: 3px solid white;
+}
 .button-read {
-    padding: 10px 68px 10px 68px;
-    border: 3px solid $fontColor;
+    padding: 5px 80px;
+    font-size: 24px;
+}
+
+.click-button {
+    color: black;
+    position: absolute;
+    top: 30%;
+    left: 20%;
 }

@@ -1,5 +1,4 @@
 .second-block {
-    grid-column: 2 / 12;
     background-color: $secondColor;
 }
 
@@ -11,11 +10,10 @@
     }
 }
 .second-text {
-    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
     align-content: space-between;
-}
-
-.second-text {
     h2, p {
         color: white;
     }

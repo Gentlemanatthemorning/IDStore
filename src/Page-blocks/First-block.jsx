@@ -15,6 +15,9 @@ class FirstBlock extends React.Component {
                   <button className="button-black">View</button>
                 </div>
               </div>
+              <div className="buttons">
+                <button className="click-button">O</button>
+              </div>
               <div className="first-text">
                 <p>Inspired by the sunrise light on Bali, Ocean breeze of Maldives, fabulous views of Philippines’s Palawan island and a little bit of his own home backyard in countryside where he go with his family every year.</p>
                 <p>His new collection for home include bedroom decor, main hall decor such as large floor lamps and medium size armchairs, also small bathroom and kitchen decor elements. </p>
